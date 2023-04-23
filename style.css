@@ -1,0 +1,216 @@
+.wrapper {
+    display: grid;
+    grid-auto-rows: minmax(0px, auto);
+    grid-template-columns: minmax(0px, 1fr)repeat(4, minmax(0px, 175px))minmax(0px, 1fr);
+}
+header{
+    grid-column: 3/3;
+    grid-row: 1/2;
+    text-align: center;
+}
+body {
+    background: linear-gradient(#fff, #97d17b); 
+    background-attachment: fixed;
+    font-family: Helvetica, sans-serif;
+    grid-column: 3/3;
+    grid-row: 3/4;
+}
+a{
+    color: black;
+    text-decoration: none; 
+}
+
+/* LOG IN/ADD ACCOUNT -- reptiles*/
+#account-input-fields{
+    grid-column: 3/3;
+    border-radius: 10px;
+    width: 200px;
+    padding-left: 10px;
+}
+.add-account-button{
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Helvetica, sans-serif;
+    margin: 8px;
+}
+.add-account-button:hover {
+    background-color: #a7cc91
+}
+.add-account-button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.log-in-button{
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Helvetica, sans-serif;
+    margin: 5px;
+}
+.log-in-button:hover {
+    background-color: #a7cc91
+}
+.log-in-button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#email-input{
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Helvetica, sans-serif;
+    margin: 5px;
+    margin-top: 100px;
+    border: none;
+    opacity: 98%;
+}
+#fname-input{
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Helvetica, sans-serif;
+    margin: 5px;
+    border: none;
+    opacity: 98%;
+}
+#lname-input{
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Helvetica, sans-serif;
+    margin: 5px;
+    border: none;
+    opacity: 98%;
+}
+#password-input{
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Helvetica, sans-serif;
+    margin: 5px;
+    border: none;
+    opacity: 98%;
+}
+
+
+/* HOME---INDEX */
+
+.home-button{
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Helvetica, sans-serif;
+    margin: 10px;
+}
+.home-button:hover {
+    background-color: #a7cc91
+}
+.home-button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.index-buttons {
+    grid-column: 3/3;
+    grid-row: 3/3;
+    margin-top: 50px;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+
+/* REPTILES */
+.reptiles-button{
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Helvetica, sans-serif;
+    margin: 10px;
+}
+.reptiles-button:hover {
+    background-color: #a7cc91;
+}
+.reptiles-button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#reptile-input{
+    grid-column: 3/3;
+}
+#reptile-species{
+    margin: 5px;
+}
+#reptile-morph{
+    margin: 5px;
+}
+#reptile-intake_date{
+    margin: 5px;
+}
+#reptile-weight{
+    margin: 5px;
+}
+#reptile-supplements{
+    margin: 5px;
+}
+#reptile-feed_date{
+    margin: 5px;
+}
+#reptile-comments{
+    margin: 5px;
+    height: 50px;   
+}
+#reptile-list{
+    grid-column: 2/5;
+    grid-row: 4/5;
+}
+li{
+    list-style: none;
+    margin: 10px;
+    display: inline-block;
+}
+
+
+
+
+
+.amphibians-button{
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Helvetica, sans-serif;
+    margin: 10px;
+}
+.amphibians-button:hover {
+    background-color: #a7cc91;
+}
+.amphibians-button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.birds-button{
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Helvetica, sans-serif;
+    margin: 10px;
+}
+.birds-button:hover {
+    background-color: #a7cc91;
+}
+.birds-button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.maintenance-button{
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Helvetica, sans-serif;
+    margin: 10px;
+}
+.maintenance-button:hover {
+    background-color: #a7cc91;
+}
+.maintenance-button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+

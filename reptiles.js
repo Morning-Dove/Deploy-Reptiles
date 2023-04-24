@@ -22,7 +22,7 @@ reptileButton.onclick = function () {
   var reptileFeedInput = document.querySelector("#reptile-feed_date");
   var repitleCommentsInput = document.querySelector("#reptile-comments");
 
-  createReptileOnServer(reptileSpeciesInput.value,reptileMorphInput.value, reptileIntakeInput.value, reptileWeightInput.value, reptileSupplementsInput.value, reptileFeedInput.value, repitleCommentsInput.value);
+  self.createReptileOnServer(reptileSpeciesInput.value,reptileMorphInput.value, reptileIntakeInput.value, reptileWeightInput.value, reptileSupplementsInput.value, reptileFeedInput.value, repitleCommentsInput.value);
 
   reptileSpeciesInput.value = "";
   reptileMorphInput.value = "";
@@ -35,7 +35,7 @@ reptileButton.onclick = function () {
 };
 
 function loadReptilesFromServer() {
-  fetch("http://localhost:8080/reptiles", {
+  fetch("https://python-railway-demo-production.up.railway.app/reptiles", {
     credentials:'include'
     }).then(function (response) {
       if (response.status == 401){
@@ -128,7 +128,7 @@ function loadReptilesFromServer() {
 }
 
 function deleteReptileFromServer(reptileId) {
-  fetch("http://localhost:8080/reptiles/" + reptileId, {
+  fetch("https://python-railway-demo-production.up.railway.app/reptiles/" + reptileId, {
     method: "DELETE",
     credentials: 'include'
   }).then(function (response) {
@@ -152,7 +152,7 @@ function updateReptileFromServer(reptileId, reptileSpeciesInput, reptileMorphInp
   data += "&comments=" + encodeURIComponent(repitleCommentsInput);
   console.log("sending data to server:", data);
 
-  fetch("http://localhost:8080/reptiles/" + reptileId, {
+  fetch("https://python-railway-demo-production.up.railway.app/reptiles/" + reptileId, {
     method: "PUT",
     credentials:'include'
   }).then(function (response) {
@@ -177,7 +177,7 @@ function createReptileOnServer(reptileId, reptileSpeciesInput, reptileMorphInput
   data += "&comments=" + encodeURIComponent(repitleCommentsInput);
   console.log("sending data to server:", data);
 
-  fetch("http://localhost:8080/reptiles", {
+  fetch("https://python-railway-demo-production.up.railway.app/reptiles", {
     // request details:
     method: "POST",
     body: data,
@@ -201,7 +201,7 @@ var Accounts = [];
 var addAccountButton = document.querySelector(".add-account-button");
 console.log("Add Account Button element", addAccountButton);
 addAccountButton.onclick = function () {
-  createAccountOnServer(email_input.value, fname_input.value, lname_input.value, password_input.value);
+  self.createAccountOnServer(email_input.value, fname_input.value, lname_input.value, password_input.value);
   console.log("add account button was clicked");
 };
 
@@ -232,7 +232,7 @@ function createAccountOnServer(email_input, fname_input, lname_input, password_i
     data += "&lname=" + encodeURIComponent(lname_input);
     console.log("sending data to server:", data);
     
-    fetch("http://localhost:8080/accounts", {
+    fetch("https://python-railway-demo-production.up.railway.app/accounts", {
       method: "POST",
       body: data,
       credentials:'include',
@@ -254,7 +254,7 @@ function createAccountOnServer(email_input, fname_input, lname_input, password_i
     data += "&password=" + encodeURIComponent(password_input);
     console.log("sending data to server:", data);
 
-    fetch("http://localhost:8080/sessions", {
+    fetch("https://python-railway-demo-production.up.railway.app/sessions", {
       method: "POST",
       body: data,
       credentials:'include'

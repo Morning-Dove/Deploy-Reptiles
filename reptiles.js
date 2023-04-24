@@ -22,7 +22,7 @@ reptileButton.onclick = function () {
   var reptileFeedInput = document.querySelector("#reptile-feed_date");
   var repitleCommentsInput = document.querySelector("#reptile-comments");
 
-  self.createReptileOnServer(reptileSpeciesInput.value,reptileMorphInput.value, reptileIntakeInput.value, reptileWeightInput.value, reptileSupplementsInput.value, reptileFeedInput.value, repitleCommentsInput.value);
+  createReptileOnServer(reptileSpeciesInput.value,reptileMorphInput.value, reptileIntakeInput.value, reptileWeightInput.value, reptileSupplementsInput.value, reptileFeedInput.value, repitleCommentsInput.value);
 
   reptileSpeciesInput.value = "";
   reptileMorphInput.value = "";
@@ -201,7 +201,7 @@ var Accounts = [];
 var addAccountButton = document.querySelector(".add-account-button");
 console.log("Add Account Button element", addAccountButton);
 addAccountButton.onclick = function () {
-  self.createAccountOnServer(email_input.value, fname_input.value, lname_input.value, password_input.value);
+  createAccountOnServer(email_input.value, fname_input.value, lname_input.value, password_input.value);
   console.log("add account button was clicked");
 };
 

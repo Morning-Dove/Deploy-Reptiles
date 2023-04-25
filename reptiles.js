@@ -35,7 +35,7 @@ reptileButton.onclick = function () {
 };
 
 function loadReptilesFromServer() {
-  fetch("https://python-railway-demo-production.up.railway.app/reptiles", {
+  fetch("https://s23-deploy-morning-dove-production.up.railway.app/reptiles", {
     credentials:'include'
     }).then(function (response) {
       if (response.status == 401){
@@ -128,7 +128,7 @@ function loadReptilesFromServer() {
 }
 
 function deleteReptileFromServer(reptileId) {
-  fetch("https://python-railway-demo-production.up.railway.app/reptiles/" + reptileId, {
+  fetch("https://s23-deploy-morning-dove-production.up.railway.app/reptiles/" + reptileId, {
     method: "DELETE",
     credentials: 'include'
   }).then(function (response) {
@@ -152,7 +152,7 @@ function updateReptileFromServer(reptileId, reptileSpeciesInput, reptileMorphInp
   data += "&comments=" + encodeURIComponent(repitleCommentsInput);
   console.log("sending data to server:", data);
 
-  fetch("https://python-railway-demo-production.up.railway.app/reptiles/" + reptileId, {
+  fetch("https://s23-deploy-morning-dove-production.up.railway.app/reptiles/" + reptileId, {
     method: "PUT",
     credentials:'include'
   }).then(function (response) {
@@ -177,7 +177,7 @@ function createReptileOnServer(reptileId, reptileSpeciesInput, reptileMorphInput
   data += "&comments=" + encodeURIComponent(repitleCommentsInput);
   console.log("sending data to server:", data);
 
-  fetch("https://python-railway-demo-production.up.railway.app/reptiles", {
+  fetch("https://s23-deploy-morning-dove-production.up.railway.app/reptiles", {
     // request details:
     method: "POST",
     body: data,
@@ -232,7 +232,7 @@ function createAccountOnServer(email_input, fname_input, lname_input, password_i
     data += "&lname=" + encodeURIComponent(lname_input);
     console.log("sending data to server:", data);
     
-    fetch("https://python-railway-demo-production.up.railway.app/accounts", {
+    fetch("https://s23-deploy-morning-dove-production.up.railway.app/accounts", {
       method: "POST",
       body: data,
       credentials:'include',
@@ -254,7 +254,7 @@ function createAccountOnServer(email_input, fname_input, lname_input, password_i
     data += "&password=" + encodeURIComponent(password_input);
     console.log("sending data to server:", data);
 
-    fetch("https://python-railway-demo-production.up.railway.app/sessions", {
+    fetch("https://s23-deploy-morning-dove-production.up.railway.app/sessions", {
       method: "POST",
       body: data,
       credentials:'include'
